@@ -44,9 +44,6 @@ export const posts = function(data: []) {
         funnyData.posts.push(tempData);
     });
 
-    console.log('Good structure of the object');
-    console.log(funnyData);
-
     return funnyData;
 };
 
@@ -88,9 +85,9 @@ export const newestPosts = function(data: Funny[], funnyData: FunnyData) {
 };
 
 export const mostVoice = function(funnyData: FunnyData) {
-    let toSort: Funny[] = funnyData.posts.slice(0);
-    let mostVotes: Funny = toSort.sort((a: any, b: any) => (a.upvotes + a.num_comments) - (b.upvotes + b.num_comments))[toSort.length - 1];
-    let checkEqual: Funny[] = toSort.filter((x: Funny) => x.upvotes + x.num_comments === mostVotes.upvotes + mostVotes.num_comments);
+    const toSort: Funny[] = funnyData.posts.slice(0);
+    const mostVotes: Funny = toSort.sort((a: any, b: any) => (a.upvotes + a.num_comments) - (b.upvotes + b.num_comments))[toSort.length - 1];
+    const checkEqual: Funny[] = toSort.filter((x: Funny) => x.upvotes + x.num_comments === mostVotes.upvotes + mostVotes.num_comments);
 
     if (checkEqual.length === 1) {
         return checkEqual[0].title;
