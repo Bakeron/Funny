@@ -1,0 +1,55 @@
+table {
+    margin: 0 auto;
+    caption {
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    tHead th {
+        font-size: 20px;
+    }
+    tBody {
+
+        tr {
+            &:nth-child(odd) {
+                background-color: #d8d8d8;
+            }
+            td {
+                text-align: center;
+                padding: 5px;
+                &:first-child {
+                    width: 800px;
+                }
+            }
+        }
+    }
+}
+
+#buttons {
+    text-align: center;
+    select {
+        margin: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 2px 10px;
+        width: 200px;
+    }
+    a {
+        margin: 30px;
+        padding: 5px;
+        border: 1px solid #000;
+        background-color: #da453a;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        transition: .5s opacity;
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+h2.title {
+    text-align: center;
+}
+
